@@ -1,0 +1,15 @@
+paths:
+  /log:
+    get:
+      summary: Log and show all server visits and their uuid
+      tags:
+        - Logger
+      produces:
+        - application/json
+      responses:
+        200:
+          description: Success
+        400:
+          description: Error
+        500:
+          description: Server down

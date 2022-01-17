@@ -1,7 +1,8 @@
 {
-  "name": "backend",
+  "name": "timestamp-uuid-server",
+  "displayName": "Timestamp UUID Server",
   "version": "1.0.0",
-  "description": "Backend Template",
+  "description": "API that returns a key-value pair of timestamp and randomly generated UUID",
   "main": "src/index.ts",
   "scripts": {
     "start": "ts-node src/index.ts",
