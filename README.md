@@ -1,7 +1,7 @@
-# api-template
+# uuid-timestamp-server
 
-Express API template built with typescript
+API that returns a key-value pair of timestamp and randomly generated UUID
 
-Inspired by the [Bulletproof node.js project architecture](https://dev.to/santypk4/bulletproof-node-js-project-architecture-4epf) special thanks to [@santiq](https://github.com/santiq)
+generated from claretnnamocha/template(https://github.com/claretnnamocha/template)
 
-Built with ❤️ by [@claretnnamocha](https://github.com/claretnnamocha)
+Documentation link: https://uuid-timestamp-logger.herokuapp.com/api-docs
