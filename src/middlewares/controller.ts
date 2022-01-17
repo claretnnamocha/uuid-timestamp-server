@@ -1,5 +1,4 @@
 import { Response } from "express";
-import { response } from "../helpers";
 import { CustomRequest } from "../types/controllers";
 
 export const controller =
@@ -7,12 +6,8 @@ export const controller =
     try {
       const data = await fn(req);
 
-      return response(res, data, data.status ? 200 : 400);
+      return res.send(data);
     } catch (e) {
-      return response(
-        res,
-        { status: false, message: "Internal server error" },
-        500
-      );
+      return res.send({ status: false, message: "Internal server error" });
     }
   };

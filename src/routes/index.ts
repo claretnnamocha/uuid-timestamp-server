@@ -1,5 +1,4 @@
 import { Response, Router } from "express";
-import { response } from "../helpers";
 import app from "./app";
 
 const routes = Router();
@@ -7,7 +6,7 @@ const routes = Router();
 routes.use("", app);
 
 routes.use((_, res: Response) => {
-  response(res, { status: false, message: "Route not found" }, 404);
+  res.send({ status: false, message: "Route not found" });
 });
 
 export default routes;

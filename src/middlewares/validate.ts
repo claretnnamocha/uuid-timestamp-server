@@ -1,6 +1,5 @@
 import { NextFunction, Response } from "express";
 import Joi from "joi";
-import { response } from "../helpers";
 import { CustomRequest } from "../types/controllers";
 
 export const validate =
@@ -10,8 +9,7 @@ export const validate =
     const value = req.method == "GET" ? req.query : req.body;
     const { error, value: vars } = schema.validate(value);
 
-    if (error)
-      return response(res, { status: false, message: error.message }, 400);
+    if (error) return res.send({ status: false, message: error.message });
 
     req.form = req.form || {};
 
